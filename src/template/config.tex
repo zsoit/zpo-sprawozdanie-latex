@@ -1,0 +1,56 @@
+\title{\mytitle}
+\author{\myauthor}
+\date{\mydate}
+
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\usepackage[polish]{babel}
+
+% font
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% margin
+\usepackage[a4paper, total={7in, 8in}]{geometry}
+\usepackage[T1]{fontenc}
+
+% graphics
+\usepackage{graphicx}
+\graphicspath{ {./src/images/} }
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \renewcommand{\footrulewidth}{0pt}
+    \renewcommand{\headrulewidth}{0pt}
+
+
+    \fancyfoot[C]{\textit{\footcenter}}
+    \fancyfoot[L]{\footleft}
+    \fancyfoot[R]{\footrigt}
+    
+    \fancyhead[LE]{\textit{\mytitle}} %EVEN PAGE
+    \fancyhead[RO]{\textit{\mytitle}} %odd page
+}
+
+\pagestyle{plain}
+
+% \usepackage{hyperref}
+\usepackage{color}   %May be necessary if you want to color links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+    pdftitle={\mytitle},
+    pdfsubject={\subject},
+    pdfauthor={\myauthor},
+    pdfkeywords={\subjectyear - \school}
+}
+
+
+\include{./src/template/color.tex}
+
+
