@@ -11,24 +11,25 @@
     \subsubsection{OperacjePilkarzy}
     \subsubsection{WyswietlaniePilkarzy}
     \subsubsection{PobieraczObrazowWikipedia}
-
+        Klasa za pomocą otwartego API Wikipedia, pobiera adres URL do głównego zdjęcia piłkarza z artykułu na Wikipedii. Zdjęcie jest pobierane podczas dodawania nowego piłkarza bądź jego edycji i zapisywana w bazie danych w taleli "awatar" w postaci linku.
     \subsection{Controllers}
         \subsubsection{Autoryzacja}
         \subsubsection{FiltrowanieKontroler}
         \subsubsection{KontrolerDanych}
+            Ta klasa służy do odbierania danych od użytkownika z poziumu aplikacji, używając metod GET (parametry z linku ) oraz POST (niejawnych, przesyłanych z formularzy.)
         \subsubsection{PilkarzPost}
         \subsubsection{Autoryzacja}
         \subsubsection{ZarzadzaniePilkarzam}
 
     \subsection{Views}
         \subsubsection{StronaHtml}
+        Zawiera szkielet strony HTML, taki jak sekcja <head> <body> <footer> czy <header>. Dzięki temu rozwiązaniu można ustawić Podstawowe dane takie jak tytuł strony, autorów, w kiklu miejscach na stronie, wczytywana z pliku konfiguracyjnego \textbf{KonfiguracjaApp.php}
         \subsubsection{SzablonHtml}
 
     \subsection{Helpers}
         \subsubsection{BazaDanychHelper}
         \subsubsection{FormularzHelper}
         
-    \subsection{Helper}
     \subsection{Projekt}
         \lstinputlisting{./src/code_snippets/Projekt.php}  
 
