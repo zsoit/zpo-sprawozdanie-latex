@@ -1,41 +1,40 @@
 \section{Koncepcja i funkcjonalność aplikacji}
 
 \subsection{Założenia przyjęte dla tworzenia aplikacji:}
-\begin{flushleft}
+    \begin{flushleft}
 
-    \textbf{Rodzaj aplikacja:} Aplikacja internetowa (architektura klient-serwer) \\
+        \textbf{Rodzaj aplikacja:} Aplikacja internetowa (architektura klient-serwer) \\
 
-    Aplikacja uruchamina lokalnie na komputerach oraz zdalnie na serwerze VPS. \\
-    Aplikacja jest dososowana również do urządzeń moblinych. \newline\newline
+        Aplikacja uruchamina lokalnie na komputerach oraz zdalnie na serwerze VPS. \\
+        Aplikacja jest dososowana również do urządzeń moblinych. \newline\newline
 
-    \textbf{Środkowisko lokalne:} Windows 10, Ubuntu 22.04 LTS \\
-    \textbf{Środowisko produkcyjne (serwer):} VPS Linux (Ubuntu 20.04 LTS): \\ 
+        \textbf{Środkowisko lokalne:} Windows 10, Ubuntu 22.04 LTS \\
+        \textbf{Środowisko produkcyjne (serwer):} VPS Linux (Ubuntu 20.04 LTS): \\ 
 
-    \subsubsection{Środowisko uruchomieniowe:}
+        \subsubsection{Środowisko uruchomieniowe:}
 
-    \textbf{Dla Windows:}
-    \begin{itemize}
-        \item XAMPP 8.2.4 (serwer HTTP Apache, Serwer bazy danych MariaDB, interpreter PHP)
-    \end{itemize}
+        \textbf{Dla Windows:}
+        \begin{itemize}
+            \item XAMPP 8.2.4 (serwer HTTP Apache, Serwer bazy danych MariaDB, interpreter PHP)
+        \end{itemize}
+            
+        \textbf{Dla Ubuntu:}
+        \begin{itemize}
+            \item PHP 8.1.2-1ubuntu2.14 Development Server (serwer HTTP + interpreter PHP)
+            \item mysql-server  ver 8.0.34-0ubuntu0.22.04.1 (serwer bazy danych MySQL)
+        \end{itemize}
+
+        \textbf{Dla VPS:}
+        \begin{itemize}
+            \item Serwer HTTP Apache2
+            \item Serwer MySQL
+            \item Interpreter PHP 8+
+        \end{itemize}
         
-    \textbf{Dla Ubuntu:}
-    \begin{itemize}
-        \item PHP 8.1.2-1ubuntu2.14 Development Server (serwer HTTP + interpreter PHP)
-        \item mysql-server  ver 8.0.34-0ubuntu0.22.04.1 (serwer bazy danych MySQL)
-    \end{itemize}
-
-    \textbf{Dla VPS:}
-    \begin{itemize}
-        \item Serwer HTTP Apache2
-        \item Serwer MySQL – MariaDB
-        \item Interpreter PHP 8+
-    \end{itemize}
-    
-\end{flushleft}
+    \end{flushleft}
 
 \pagebreak
 
-\subsection{Założenia przyjęte dla tworzenia aplikacji}
 
 \subsubsection{Cechy}
 \begin{enumerate}
@@ -50,28 +49,32 @@
 \end{enumerate}
 
 \subsubsection{Ograniczenia:}
-\begin{itemize}
-    \item PHP jest podatny na pewne rodzaje ataków, takich jak na przykład wstrzykiwanie SQL, dlatego bezpieczństwo aplikacji nie jest na najwyższym możliwym poziomie i szczegłówa konfiguracja zabezpieczeń nie jest łatwa do wdrożenia w krótkim czasie
-    \item PHP jest językiem interpretowanym dlatego wydajność w stosunku do języków komplilowanych jest niższa
-    \item PHP nie posiada wszystkich elementów obiektowowych znanych z innych języków
-    \item Ograniczony czas, przez co nie można zawrzeć wszystkich celów w wzorcowy sposób zgodny w 100\% z dokumentacją
-    \item Ograniczenie aktualnej wiedzy, przez co niektóre elementy projektu mogą stanowić wyzwanie
-    \item W naszej aplikacji proces logowania ogranicza się do jednego super użytkownika, którego poświadczenia są statycznie zapisne w pliku \textbf{KonfiguracjaApp.php} jako tzw. \textbf{plain text} (niezahaszowane hasła przechowywane jako zwykły, łatwy do odczytania i przechwycenia tekst), jest to zła praktyka jednak chcieliśmy uprościć tą część aplikacji ponieważ oddala się ona dość znacząco od pierwotnego tematu, a wymaga dość dużo nadprogramowej pracy.
-\end{itemize}
+    \begin{itemize}
+        \item PHP jest podatny na pewne rodzaje ataków, takich jak na przykład wstrzykiwanie SQL, dlatego bezpieczństwo aplikacji nie jest na najwyższym możliwym poziomie i szczegłówa konfiguracja zabezpieczeń nie jest łatwa do wdrożenia w krótkim czasie
+        \item PHP jest językiem interpretowanym dlatego wydajność w stosunku do języków komplilowanych jest niższa
+        \item PHP nie posiada wszystkich elementów obiektowowych znanych z innych języków
+        \item Ograniczony czas, przez co nie można zawrzeć wszystkich celów w wzorcowy sposób zgodny w 100\% z dokumentacją
+        \item Ograniczenie aktualnej wiedzy, przez co niektóre elementy projektu mogą stanowić wyzwanie
+        \item W naszej aplikacji proces logowania ogranicza się do jednego super użytkownika, którego poświadczenia są statycznie zapisne w pliku \textbf{KonfiguracjaApp.php} jako tzw. \textbf{plain text} (niezahaszowane hasła przechowywane jako zwykły, łatwy do odczytania i przechwycenia tekst), jest to zła praktyka jednak chcieliśmy uprościć tą część aplikacji ponieważ oddala się ona dość znacząco od pierwotnego tematu, a wymaga dość dużo nadprogramowej pracy.\\
+        Plik konfiguracyjny \textbf{KonfiguracjaApp.php}:
+        \lstinputlisting{./src/code_snippets/oop-php/KonfiguracjaApp.php} 
+        
+    \end{itemize}
 
 \pagebreak
 
 \subsection{Narzędzia programistyczne:}
     \begin{flushleft}
-        Język: PHP 8+ OOP \\
-        Dodatkowe biblioteki: mysqli (łączenie się z bazą danych)\\
-        Dodatkowe technologie: HTML,CSS, JavaScript, MySQL, FontAwesone(ikonki) \newline\newline
+        Język: \textbf{PHP 8+ OOP} \\
+        Dodatkowe biblioteki: \textbf{mysqli} (łączenie się z bazą danych)\\
+        Dodatkowe technologie: \textbf{HTML,CSS, JavaScript, MySQL, FontAwesome}(ikonki) \newline\newline
 
         \textbf{Visual Studio Code + PHP Code Extenions}: IDE (Zintegrowane środowisko programistyczne)\\
         \textbf{XAMPP}: środowisko uruchomieniowe dla Windows \\
         \textbf{GIT} – System Kontroli Wersji\\
         \textbf{phpMyAdmin} - graficzna nakładka na serwer MySQL, ułatwiająca operacje na bazie danych\\
         \textbf{Brave, Google Chorme}– przeglądarka internetowa posiadająca narzędzia Chrome DevTools \\
+        \textbf{Microsoft Egde}– przeglądarka internetowa oraz rozbudowany czytnik plików PDF \\
         Pakiet \textbf{make} – automatyzacja poleceń w terminalu\\
         \textbf{FileZilla} – klient FTP\\
         \textbf{LaTeX} - skład tekstu do sprawozdania\\
@@ -111,32 +114,29 @@
     \pagebreak
 
 \subsection{Prototyp}
-Prototyp graficzny interfejsu użytkownika. Wykonane w programie Figma.
-\begin{flushleft}
-    \begin{figure}[!htb]
-        \centering
-        \includegraphics[width=0.5\textwidth]{1-prototyp}
-        \caption{Widok strony głównej}
-    \end{figure}
+    Prototyp graficzny interfejsu użytkownika. Wykonane w programie Figma.
+    \begin{flushleft}
+        \begin{figure}[!htb]
+            \centering
+            \includegraphics[width=0.5\textwidth]{1-prototyp}
+            \caption{Widok strony głównej}
+        \end{figure}
 
-    \begin{figure}[!htb]
-        \centering
-        \includegraphics[width=0.5\textwidth]{2-prototyp}
-        \caption{Widok ekranu logowania}
-    \end{figure}
+        \begin{figure}[!htb]
+            \centering
+            \includegraphics[width=0.5\textwidth]{2-prototyp}
+            \caption{Widok ekranu logowania}
+        \end{figure}
 
-    \begin{figure}[!htb]
-        \centering
-        \includegraphics[width=0.5\textwidth]{3-prototyp}
-        \caption{Widok strony głównej}
-    \end{figure}
+        \begin{figure}[!htb]
+            \centering
+            \includegraphics[width=0.5\textwidth]{3-prototyp}
+            \caption{Widok strony głównej}
+        \end{figure}
 
-    \begin{figure}[!htb]
-        \centering
-        \includegraphics[width=0.5\textwidth]{4-prototyp}
-        \caption{Widok strony głównej}
-    \end{figure}   
-\end{flushleft}
-
-    
-
+        \begin{figure}[!htb]
+            \centering
+            \includegraphics[width=0.5\textwidth]{4-prototyp}
+            \caption{Widok strony głównej}
+        \end{figure}   
+    \end{flushleft}
