@@ -1,32 +1,37 @@
 \section{Projekt Bazy Danych}
-    \subsection{Model bazy danych - relacyjna SQL}
-        Baza danych jest relacyjna oraz obsługiwana jest na serwerze SQL.
-    \subsection{Opis}
+    \subsection{Relacyjna baza dnaych SQL}
+        Struktura oparta jest na modelu relacyjnym. Serwer SQL jest platformą, która obsługuje taką bazę danych, umożliwiając przechowywanie, zarządzanie oraz wykonywanie zapytań do tych danych.\\
+
+        Modele relacyjne baz danych korzystają z relacji między tabelami, wykorzystując klucze główne i obce do ustanawiania powiązań. Dzięki językowi zapytań SQL (Structured Query Language) serwer SQL może zarządzać danymi, umożliwiając operacje takie jak wstawianie, odczyt, aktualizację i usuwanie informacji z tych tabel.\\
+        
+        Serwer SQL zapewnia efektywne zarządzanie bazą danych, a także zabezpieczenia, optymalizację oraz skalowalność. To narzędzie umożliwia obsługę wielu użytkowników jednocześnie, kontrolę nad dostępem do danych oraz wykonywanie złożonych operacji na danych przechowywanych w bazie relacyjne
+
+    \subsection{Model bazy danych - Opis}
+        \lstinputlisting[language=SQL]{./src/code_snippets/oop-php/src/sql/baza.sql}  
 
             Kod SQL definiuje strukturę bazy danych dla systemu zarządzania informacjami o piłkarzach.
 
             \begin{enumerate}
                 \item Tworzenie bazy danych:\\
-                Kod rozpoczyna od próby usunięcia bazy danych "pilkanozna" (jeśli istnieje) i następnie tworzy nową bazę o tej samej nazwie.
+                Kod rozpoczyna od próby usunięcia bazy danych \textbf{pilkanozna} (jeśli istnieje) i następnie tworzy nową bazę o tej samej nazwie.
                 Następnie wybiera tę nowo utworzoną bazę jako aktywną dla dalszych operacji.
-                Definicje tabel:
-                \item Określa strukturę różnych tabel:\\
+                \item  Definicje tabel:
                 \begin{itemize}
-                    \item Tabela "pilkarz" przechowuje informacje o piłkarzach, takie jak imię, nazwisko, dane osobowe, umiejętności piłkarskie i pochodzenie.
-                    \item Tabela "awatar" prawdopodobnie zawiera linki do obrazków reprezentujących piłkarzy.
-                    \item Tabela "krajpilkarza" przechowuje informacje o krajach, do których należą piłkarze.
-                    \item Tabela "numernakoszulce" odnosi się do numerów na koszulkach piłkarzy.
-                    \item Tabela "pozycja" zawiera różne pozycje, na których piłkarze mogą grać.
+                    \item Tabela \textbf{pilkarz} przechowuje informacje o piłkarzach, takie jak imię, nazwisko, dane osobowe, umiejętności piłkarskie i pochodzenie.
+                    \item Tabela \textbf{awatar} prawdopodobnie zawiera linki do obrazków reprezentujących piłkarzy.
+                    \item Tabela \textbf{krajpilkarza} przechowuje informacje o krajach, do których należą piłkarze.
+                    \item Tabela \textbf{numernakoszulce} odnosi się do numerów na koszulkach piłkarzy.
+                    \item Tabela \textbf{pozycja} zawiera różne pozycje, na których piłkarze mogą grać.
                 \end{itemize}
                              
                 \item Wstawianie danych:\\
-                Dodaje przykładowe dane do tabeli "pozycja", "numernakoszulce" i "krajpilkarza".
+                Dodaje przykładowe dane do tabeli \textbf{pozycja}, \textbf{numernakoszulce} i \textbf{krajpilkarza}.
             \end{enumerate}
 
         \subsubsection{Ustawienie uprawnień dla użytkownika}
         \begin{lstlisting}
-CREATE USER 'projekt'@'localhost' IDENTIFIED BY 'Pracownia107!'; 
-GRANT ALL PRIVILEGES ON pilkanozna.* TO 'projekt'@'localhost';
+CREATE USER "projekt"@"localhost" IDENTIFIED BY "Pracownia107!"; 
+GRANT ALL PRIVILEGES ON pilkanozna.* TO "projekt"@"localhost";
         \end{lstlisting}
 
     \pagebreak
