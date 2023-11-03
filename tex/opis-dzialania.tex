@@ -2,7 +2,7 @@
     \subsection{Przewodnik}
 
         \subsubsection{Strona internetowa}
-            Aplikacja znajduję się na zewnętrznym serwerze VPS i można ją przetestować bez uruchamiana jej na swoim komputerze, dostępna jest pod adresem:
+            Aplikacja znajduję się na zewnętrznym serwerze VPS i można ją przetestować bez uruchomiania lokalnie, dostępna jest pod adresem:
             \begin{itemize}
                 \item \url{https://projekt.hu1.pl/}
             \end{itemize}
@@ -12,8 +12,25 @@
                 \includegraphics[width=0.6\textwidth]{przewodnik/home.png}
                 \caption{Strona Główna}                
             \end{figure}
-    
+
+            \pagebreak
+
+            \begin{figure}[!htb]
+                \centering
+                \includegraphics[width=0.2\textwidth]{xiaomi}
+                \caption{Strona Główna - wersja mobilna, Android}                
+            \end{figure}
         \subsection{Wyświetlanie oraz filtrowanie piłkarzy}
+
+        \begin{itemize}
+            \item \url{https://projekt.hu1.pl/szukaj}
+        \end{itemize}
+
+            \begin{figure}[!htb]
+                \centering
+                \includegraphics[width=0.6\textwidth]{przewodnik/filtry.png}
+                \caption{Panel filtrowania}                
+            \end{figure}
         
         \subsection{Panel Logowania}
             Panel logowania dostępny jest pod adresem:
@@ -36,7 +53,7 @@
         \pagebreak
 
         \subsection{Panel Administracyjny}
-            Jako administrator użytkownik ma podniesione uprawienia i dodatkową zakładkę \textit{Dodaj} oraz przycisk \textit{Edytuj} lub \textit{Usuń} nad zdjęciem piłkarza.
+            Jako administrator użytkownik ma podniesione uprawienia i dodatkową zakładkę \textit{Dodaj} oraz przycisk \textit{Edytuj} lub \textit{Usuń} pod imieniem piłkarza.
 
             \begin{figure}[!htb]
                 \centering
@@ -45,8 +62,15 @@
             \end{figure}
 
         \subsection{Modyfikowanie danych na temat piłkarzy}
-                \subsubsection{Dodawanie piłkarza}
-                 Na podstawie \textbf{Imienia} oraz \textbf{Nazwiska} zdjęcie piłkarza jest pobierane z serwisu Wikipedia, jeżeli piłkarz ma tam swój artykuł wraz ze zdjęciem (w 90 \% przypadkach posiada), w innym wypadku ustawia domyślne zdjęcie anonimowego użytkownika. 
+
+        \subsubsection{Dodawanie piłkarza}
+
+                \begin{itemize}
+                    \item \url{https://projekt.hu1.pl/formularz_dodaj}
+                \end{itemize}
+                
+        
+                 Zdjęcie piłkarza jest pobierane z serwisu Wikipedia na podstawie \textbf{Imienia} oraz \textbf{Nazwiska}, o ile zawodnik posiada tam swój artykuł wraz ze zdjęciem - co zazwyczaj ma miejsce w 90\% przypadków. W sytuacji, gdy nie ma dostępnego zdjęcia piłkarza na stronie, automatycznie ustawiane jest domyślne zdjęcie anonimowego użytkownika.
 
                     \begin{figure}[!htb]
                         \centering
@@ -54,20 +78,29 @@
                         \caption{Formularz, który umożliwia dodanie nowego Piłkarza}                
                     \end{figure}
                     \pagebreak
-    
-                \subsubsection{Usuwanie piłkarza}
-                    \begin{figure}[!htb]
-                        \centering
-                        \includegraphics[width=0.6\textwidth]{przewodnik/usun.png}
-                        \caption{Potwierdzenie usunięcia Piłkarza}                
-                    \end{figure}
-                    \pagebreak
 
-                \subsubsection{Edycja piłkarza}
+        \subsubsection{Usuwanie piłkarza}
+        Przed usunięciem piłkarza pojawia się potwierdzenie. Można jeszcze anulować decyzję i zrezygnować z usunięcia lub potwierdzić.
+            \begin{itemize}
+                \item np. \url{https://projekt.hu1.pl/usun?id=79}
+            \end{itemize}
+            
+            \begin{figure}[!htb]
+                \centering
+                \includegraphics[width=0.6\textwidth]{przewodnik/usun.png}
+                \caption{Potwierdzenie usunięcia Piłkarza}                
+            \end{figure}
+            \pagebreak
 
-                    \begin{figure}[!htb]
-                        \centering
-                        \includegraphics[width=0.6\textwidth]{przewodnik/edycja.png}
-                        \caption{Panel służący do edycji informacji na temat piłkarza}                
-                    \end{figure}
- 
+        \subsubsection{Edycja piłkarza}
+
+            \begin{itemize}
+                \item np. \url{https://projekt.hu1.pl/edytuj?id=79}
+            \end{itemize}
+            
+
+            \begin{figure}[!htb]
+                \centering
+                \includegraphics[width=0.6\textwidth]{przewodnik/edycja.png}
+                \caption{Panel służący do edycji informacji na temat piłkarza}                
+            \end{figure}
