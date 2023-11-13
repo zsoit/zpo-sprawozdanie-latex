@@ -2,10 +2,14 @@
 \author{\myauthor}
 \date{\mydate}
 
-
+% pdf inlcude
 
 \documentclass{article}
 \usepackage{amsmath}
+
+\usepackage{pdfpages}
+\usepackage{pgfgantt}
+
 
 \usepackage[T1]{fontenc}
 \usepackage[polish]{babel}
@@ -23,7 +27,10 @@
 \renewcommand{\familydefault}{\sfdefault}
 
 % margin
-\usepackage[a4paper, total={7in, 8in}]{geometry}
+\usepackage[a4paper, total={7in, 8in}, headheight=12pt]{geometry}
+
+% \usepackage[a4paper, left=2cm, right=2cm, top=10cm, bottom=2cm]{geometry}
+
 % \usepackage[T1]{fontenc}
 
 % graphics
@@ -33,7 +40,7 @@
 \usepackage{fancyhdr}
 \fancypagestyle{plain}{
     \fancyhf{}
-    \renewcommand{\footrulewidth}{0pt}
+    % \renewcommand{\footrulewidth}{0pt}
     \renewcommand{\headrulewidth}{0pt}
 
 
@@ -41,9 +48,20 @@
     \fancyfoot[L]{\footleft}
     \fancyfoot[R]{\footrigt}
     
-    \fancyhead[LE]{\textit{\mytitle}} %EVEN PAGE
-    \fancyhead[RO]{\textit{\mytitle}} %odd page
+    % \fancyhead[LE]{\textit{
+    %     \includepdf[pages=1]{src/images/header.pdf}
+    % }} %EVEN PAGE
+
+    % \fancyhead[CO]{\includegraphics[width=\textwidth]{src/images/header.pdf}} %odd page
+    \fancyhead[CO]{\includegraphics[width=16cm]{src/images/header.pdf}} %odd page
+
+
+    % \pagestyle{fancy}
+    % \fancyhf{}
+    % \rhead{\includegraphics[width=\textwidth]{src/images/header.pdf} \pagebreak}
 }
+% \rhead{\includegraphics[width=1cm]{src/images/header.pdf}}
+\setlength\headheight{51pt} 
 
 \pagestyle{plain}
 
