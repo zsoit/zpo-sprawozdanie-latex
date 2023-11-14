@@ -4,7 +4,7 @@
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=1.0\textwidth]{diagramy/klas.png}
-    \caption{Diagram klas - Obraz w pełnej rozdzielczośći \url{https://tiny.pl/cnmwh}}                
+    \caption{Diagram klas - Obraz w pełnej rozdzielczości \url{https://tiny.pl/cnmwh}}                
 \end{figure}
 
 \subsection{Opis przeznaczenia klas}
@@ -30,7 +30,7 @@
         \item \textbf{Formularz\_Dodaj()} - Wyświetla pusty formularz służący dodawaniu nowego użytkownika
         \item \textbf{Dodaj()} - Dodaje użytkownika do bazy dany na podstawie przesłanych z formularza danych
         \item \textbf{Filtry()} - Wyświetla formularz, który służy do filtrowania
-        \item \textbf{Szukaj()} - Wyświetla piłkarzy na podstawie wybranych parametró
+        \item \textbf{Szukaj()} - Wyświetla piłkarzy na podstawie wybranych parametrów
         \item \textbf{Zaloguj()} - Wyświetla formularz logowania
         \item \textbf{Error404()} - Wyświetla status błędu, jeżeli strona nie istnieje
     \end{itemize}
@@ -39,11 +39,11 @@
 
     \subsubsection{BazaDanych}
     Odpowiedzialna jest za obsługę połączenia z bazą danych, zarządzanie połączeniem  oraz zapewnienie ogólnej komunikacji z nią. Jest kluczowym połączeniem między aplikacją a danymi przechowywanymi w systemie.\\
-    Dostępne metody, pełniają następująca funkcjonalność: 
+    Dostępne metody, pełnią następująca funkcjonalność: 
     \begin{itemize}
-        \item \textbf{Polaczenie()} - Ustawienie połączenie z serwerem bazy danych
+        \item \textbf{Polaczenie()} - Ustawienie połączenia z serwerem bazy danych
         \item \textbf{Rozlaczenie()} - Kończy i przerywa połączenie
-        \item \textbf{Zapytanie()} - Wykonuje polecenie SQL i pozwala przechwycić rezultat
+        \item \textbf{Zapytanie()} - Wykonuje polecenia SQL i pozwala przechwycić rezultat
     \end{itemize}
     Plik konfiguracyjny \textbf{KonfiguracjaDB.php}
     \lstinputlisting{./src/code_snippets/oop-php/KonfiguracjaDB.php} 
@@ -80,7 +80,7 @@
 
     \subsubsection{WyswietlaniePilkarzy}
         Klasa koncentruje się na prezentacji danych dotyczących piłkarzy. Zapewnia funkcje prezentacji, sortowania, wyświetlania informacji o piłkarzach, dostosowanej do interfejsu użytkownika.\\
-        Dostępne metody pełniają następującą funkcjonalność: 
+        Dostępne metody pełnią następującą funkcjonalność: 
         \begin{itemize}
             \item \textbf{WyswietlaniePilkarzy()} -  Wykonuje zapytanie do bazy danych i wyświetla piłkarzy
             \item \textbf{WyswietlFiltrowanychPilkarzy()} - Wykonuje zapytanie do bazy danych i wyświetla piłkarzy według zastosowanych fitrów
@@ -93,7 +93,7 @@
 
     \subsubsection{PobieraczObrazowWikipedia}
         Klasa za pomocą otwartego API Wikipedia, pobiera adres URL do głównego zdjęcia piłkarza z artykułu na Wikipedii. Zdjęcie jest pobierane podczas dodawania nowego piłkarza bądź jego edycji i zapisywana w bazie danych w tabeli \textbf{awatar} w postaci linku.\\
-        Dostępne metody pełniają następującą funkcjonalność: 
+        Dostępne metody pełnią następującą funkcjonalność: 
         \begin{itemize}
             \item \textbf{pobierzDaneObrazu()} -  pobiera jako format JSON dane z adresu \url{https://pl.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=imie_nazwisko}
             \item \textbf{pobierzZrodlo()} - pobiera z tego formatu JSON, link do obrazu
