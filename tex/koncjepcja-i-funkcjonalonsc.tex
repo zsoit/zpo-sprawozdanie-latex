@@ -8,11 +8,11 @@
         \underline{\textbf{Nazwa aplikacji:}} Piłka nożna - Katalog (Aplikacja PHP) \\
         \underline{\textbf{Rodzaj aplikacji:}} Aplikacja internetowa \newline\newline
 
-        Architektura klient-serwer \\
-        Aplikacja uruchamina lokalnie na komputerach oraz zdalnie na serwerze VPS. \\
-        Aplikacja jest dososowana również do urządzeń moblinych. \newline\newline
+        Architektura klient-serwer. \\
+        Aplikacja uruchamiana lokalnie na komputerach oraz zdalnie na serwerze VPS. \\
+        Aplikacja jest dostosowana również do urządzeń mobilnych. \newline\newline
 
-        \textbf{Środkowisko lokalne:} Windows 10, Ubuntu 22.04 LTS \\
+        \textbf{Środowisko lokalne:} Windows 10, Ubuntu 22.04 LTS \\
         \textbf{Środowisko produkcyjne (serwer):} VPS Linux (Ubuntu 20.04 LTS): \\ 
 
         \subsubsection{Środowisko uruchomieniowe:}
@@ -44,7 +44,7 @@
 
 \subsubsection{Cechy}
 \begin{enumerate}
-    \item Zastosowanie statycznego typowania (zmiennych, funkcji, metod, pól klasy), podobnie jak w językach C/C++, Java, C\#. Jest to bardziej przewidywalene i pozwala narzucić określony typ np. zwracanej zmiennej, aby uniknąć wielu błędów. Domyślnie PHP nie wymaga statycznego typowania.
+    \item Zastosowanie statycznego typowania (zmiennych, funkcji, metod, pól klasy), podobnie jak w językach C/C++, Java, C\#. Jest to bardziej przewidywalne i pozwala narzucić określony typ np. zwracanej zmiennej, aby uniknąć wielu błędów. Domyślnie PHP nie wymaga statycznego typowania.
     \item Podział projektu na wiele plików według struktury MVC Model-View-Controller (pol. Model-Widok-Kontroler):
         \begin{itemize}
             \item Model jest pewną reprezentacją problemu bądź logiki aplikacji.
@@ -56,12 +56,12 @@
 
 \subsubsection{Ograniczenia:}
     \begin{itemize}
-        \item PHP jest podatny na pewne rodzaje ataków, takich jak na przykład wstrzykiwanie SQL, dlatego bezpieczństwo aplikacji nie jest na najwyższym możliwym poziomie i szczegłówa konfiguracja zabezpieczeń nie jest łatwa do wdrożenia w krótkim czasie
-        \item PHP jest językiem interpretowanym dlatego wydajność w stosunku do języków komplilowanych jest niższa
-        \item PHP nie posiada wszystkich elementów obiektowowych znanych z innych języków
+        \item PHP jest podatny na pewne rodzaje ataków, takich jak na przykład wstrzykiwanie SQL, dlatego bezpieczeństwo aplikacji nie jest na najwyższym możliwym poziomie i szczegółowa konfiguracja zabezpieczeń nie jest łatwa do wdrożenia w krótkim czasie
+        \item PHP jest językiem interpretowanym dlatego wydajność w stosunku do języków kompilowanych jest niższa
+        \item PHP nie posiada wszystkich elementów obiektowych znanych z innych języków
         \item Ograniczony czas, przez co nie można zawrzeć wszystkich celów w wzorcowy sposób zgodny w 100\% z dokumentacją
         \item Ograniczenie aktualnej wiedzy, przez co niektóre elementy projektu mogą stanowić wyzwanie
-        \item W naszej aplikacji proces logowania ogranicza się do jednego super użytkownika, którego poświadczenia są statycznie zapisne w pliku \textbf{KonfiguracjaApp.php} jako tzw. \textbf{plain text} (niezahaszowane hasła przechowywane jako zwykły, łatwy do odczytania i przechwycenia tekst), jest to zła praktyka jednak chcieliśmy uprościć tę część aplikacji ponieważ oddalała się ona dość znacząco od pierwotnego tematu, a wymagała dość dużo nadprogramowej pracy.\\
+        \item W naszej aplikacji proces logowania ogranicza się do jednego super użytkownika, którego poświadczenia są statycznie zapisane w pliku \textbf{KonfiguracjaApp.php} jako tzw. \textbf{plain text} (niezahaszowane hasła przechowywane jako zwykły, łatwy do odczytania i przechwycenia tekst), jest to zła praktyka jednak chcieliśmy uprościć tę część aplikacji ponieważ oddalała się ona dość znacząco od pierwotnego tematu, a wymagała dość dużo nadprogramowej pracy.\\
         Plik konfiguracyjny \textbf{KonfiguracjaApp.php}:
         \lstinputlisting{./src/code_snippets/oop-php/KonfiguracjaApp.php} 
         
@@ -75,7 +75,7 @@
         Dodatkowe biblioteki: \textbf{mysqli} (łączenie się z bazą danych)\\
         Dodatkowe technologie: \textbf{HTML,CSS, JavaScript, MySQL, FontAwesome}(ikonki) \newline\newline
 
-        \textbf{Visual Studio Code + PHP Code Extenions}: IDE (Zintegrowane środowisko programistyczne)\\
+        \textbf{Visual Studio Code + PHP Code Extensions}: IDE (Zintegrowane środowisko programistyczne)\\
         \textbf{JetBrains PhpStorm}: IDE (Zintegrowane środowisko programistyczne)\\
         \textbf{XAMPP}: środowisko uruchomieniowe dla Windows \\
         \textbf{Docker}: konteneryzacja bazy danych lokalnie\\
@@ -100,15 +100,15 @@
 
         \begin{itemize}
             \item edycje, usuwanie, dodawanie nowego piłkarza,
-            \item sortowanie oraz wyświetalnie zdjęć,
+            \item sortowanie oraz wyświetlanie zdjęć,
             \item wyszukiwanie po nazwisku, imieniu itp.
-            \item filtrowanie szczegłówe po np. kraju, pozycji itp.
+            \item filtrowanie szczegółowe po np. kraju, pozycji itp.
             \item logowanie oraz autoryzacja użytkownika przeglądającego aplikacje
             \item wyświetlanie zdjęcia piłkarza (pobierane z serwisu Wikipedia)\newline\newline
         \end{itemize}
 
 
-         Użytkownik może za pomocą przegląrki internetowej:
+         Użytkownik może za pomocą przeglądarki internetowej:
         \begin{itemize}
             \item  połączyć się z serwerem na którym hostowana jest aplikacja
             \item zalogować się do panelu poprzez formularz logowania, uzyskać autoryzacje

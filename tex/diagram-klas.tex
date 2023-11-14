@@ -131,13 +131,13 @@
 
 
 \subsection{Views}
-    Views (pol. Widoki), ta sekcja zawiera metody, które reprezentują wartwę graficzną aplikacji w HTML, CSS i JavaScript. Odpowiada za poprawne wyświetlanie informacji, które zostały uzyskane z bazy danych.
+    Views (pol. Widoki), ta sekcja zawiera metody, które reprezentują warstwę graficzną aplikacji w HTML, CSS i JavaScript. Odpowiada za poprawne wyświetlanie informacji, które zostały uzyskane z bazy danych.
     \subsubsection{StronaHtml}
-    Zawiera szkielet strony HTML, taki jak sekcja <head> <body> <footer> czy <header>. Dzięki temu rozwiązaniu można ustawić Podstawowe dane takie jak tytuł strony, autorów, w kiklu miejscach na stronie, wczytywana z pliku konfiguracyjnego \textbf{KonfiguracjaApp.php}
+    Zawiera szkielet strony HTML, taki jak sekcja <head> <body> <footer> czy <header>. Dzięki temu rozwiązaniu można ustawić Podstawowe dane takie jak tytuł strony, autorów, w kilku miejscach na stronie, wczytywana z pliku konfiguracyjnego \textbf{KonfiguracjaApp.php}
     \lstinputlisting{./src/code_snippets/oop-php/classes/Views/StronaHtml.php} 
 
     \subsubsection{SzablonHtml}
-    Klasa zawiera komponenty HTML, które służą do wyświetlania elementów, takich jak card (karta z informacją o piłkrzu), formularze, panel logowania.
+    Klasa zawiera komponenty HTML, które służą do wyświetlania elementów, takich jak card (karta z informacją o piłkarzu), formularze, panel logowania.
     \lstinputlisting{./src/code_snippets/oop-php/classes/Views/SzablonHtml.php} 
 
 
@@ -154,7 +154,7 @@
 
     
 \subsection{Projekt}
-    Klasa ta jest ostatecznym elementem programu, posiadającym metodę \textit{Uruchom()}, która integruje Routing, StronęHtml oraz klasę Aplikacja w celu właściwego uruchomienia programu z zachowaniem odpowiedniej kolejności działań. Metoda \textit{Uruchom()} łączy te elementy w logiczną sekwencję, umożliwiając kompleksowe działanie aplikacji poprzez współpracę wymienionych składników w spójny sposób.
+    Klasa ta jest ostatecznym elementem programu, posiadającym metodę \textit{Uruchom()}, która integruje Routing, StronęHtml oraz klasę Aplikacja w celu właściwego uruchomienia programu z zachowaniem odpowiedniej kolejności działań. Metoda \textit{Uruchom()} łączy elementy w logiczną sekwencję, umożliwiając kompleksowe działanie aplikacji poprzez współpracę wymienionych składników w spójny sposób.
     \lstinputlisting{./src/code_snippets/oop-php/classes/Projekt.php} 
 
 \subsection{FileLoader}    
